@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Townsayt Apparel</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="STACKS/WEB.png">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+
+            <img src="STACKS/LOGO.png" class="logo">
+
+            <div class="search-bar">
+                <input type="search" class="search-input" placeholder="Search...">
+            </div>
+
+                <div class="nav-icons">
+                    <i class="fa-solid fa-magnifying-glass search-toggle"></i>
+                    <i class="fa-solid fa-bars menu-btn"></i>
+                </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <h1>Own your story.</h1>
+
+        <p class="hero-text">Premium streetwear inspired by
+        individuality, confidence, and culture.
+        </p>
+
+        <a href="#">Shop now</a>
+
+        <div class="Hero">
+            <img src="STACKS/Hero.png" width="500px" class="hero-img">
+        </div>
+
+    </main>
+
+<div class="copyright">
+    © 2026 Townsyt Apparel. All Rights Reserved.
+</div>
+
+<script>
+
+
+            <!--Javascript-->
+
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+const searchBtn = document.querySelector(".search-toggle");
+const searchBar = document.querySelector(".search-bar");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+searchBtn.addEventListener("click", () => {
+    searchBar.classList.toggle("active");
+});
+
+</script>
+
+</body>
+</html>
