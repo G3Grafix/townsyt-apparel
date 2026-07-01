@@ -2,79 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta
+    name="Townsayt Custom Apparel"
+    content="Top Sports Apparel in Midsayap">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Townsayt Apparel</title>
+    <title>Townsayt Custom Apparel</title>
 
+    <!--Linking css style-->
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="STACKS/WEB.png">
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!--Linking fontAwesome for icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!--Linking Tab Logo-->
+    <link rel="icon" type="image/png" href="STACKS/WEB.png">
 
 </head>
 <body>
+
+    <!--HEADER NAVBAR-->
     <header>
-        <nav>
+        <div class="navbar">
+            <div class="nav-content">
 
-            <img src="STACKS/LOGO.png" class="logo">
-
-            <div class="search-bar">
-                <input type="search" class="search-input" placeholder="Search...">
-            </div>
+                <img src="STACKS/LOGO.png" alt="Townsayt Midsayap" width="200px">
 
                 <div class="nav-icons">
-                    <i class="fa-solid fa-magnifying-glass search-toggle"></i>
-                    <i class="fa-solid fa-bars menu-btn"></i>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Gallery</a>
                 </div>
 
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+                <div class="nav-contact">
+                    <a href="#">Contact us</a>
+                </div>
 
-        </nav>
+                <button id="menu-open-button" class="fas fa-bars"></button>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <h1>Own your story.</h1>
+    <!--HEARDER SIDEBAR-->
+    <aside class="sideBar">
+        <div class="side-nav">
+            <img src="STACKS/LOGO.png" alt="Townsayt Midsayap" width="200px">
 
-        <p class="hero-text">Premium streetwear inspired by
-        individuality, confidence, and culture.
-        </p>
+            <button id="menu-close-button" class="fas fa-times"></button>
+        </div>    
+            <div class="bar-line"></div>
 
-        <a href="#">Shop now</a>
+            <small class="tagLine">Midsayap top apparel service.</small>
 
-        <div class="Hero">
-            <img src="STACKS/Hero.png" width="500px" class="hero-img">
-        </div>
+            <div class="nav-icons">
 
-    </main>
+                <a href="#">
+                    <span>Home</span>
+                    <small>Go to Homepage</small>
+                </a>
 
-<div class="copyright">
-    © 2026 Townsyt Apparel. All Rights Reserved.
-</div>
+                <a href="#">
+                    <span>About</span>
+                    <small>See more details & trust info</small>
+                </a>
 
-<script>
+                <a href="#">
+                    <span>Gallery</span>
+                    <small>Browse available designs</small>
+                </a>
 
+            </div>
 
-            <!--Javascript-->
+            <div class="nav-contact">
+                <a href="#">CONTACT US</a>
+            </div>
+    </aside>
 
-const menuBtn = document.querySelector(".menu-btn");
-const navLinks = document.querySelector(".nav-links");
-
-const searchBtn = document.querySelector(".search-toggle");
-const searchBar = document.querySelector(".search-bar");
-
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-
-searchBtn.addEventListener("click", () => {
-    searchBar.classList.toggle("active");
-});
-
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
