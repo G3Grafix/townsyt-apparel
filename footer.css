@@ -1,0 +1,103 @@
+.site-footer,
+.site-footer * {
+    box-sizing: border-box;
+}
+
+.site-footer {
+    width: 100%;
+    padding: 42px 8% 18px;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, .96),
+            rgba(248, 250, 252, .96)
+        );
+    color: var(--text-primary);
+    border-top: 1px solid var(--border);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: minmax(220px, .8fr) minmax(280px, 1fr);
+    gap: 34px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.footer-brand img {
+    width: 180px;
+    max-width: 100%;
+    margin-bottom: 14px;
+}
+
+.footer-brand p {
+    max-width: 420px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.footer-details {
+    display: grid;
+    gap: 14px;
+}
+
+.footer-details a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--text-primary);
+    box-shadow: 0 8px 22px rgba(17, 24, 39, .06);
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.footer-details a:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+
+.footer-details i {
+    display: grid;
+    place-items: center;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, var(--accent-color), var(--primary-dark));
+    color: var(--text-white);
+}
+
+.footer-details span {
+    overflow-wrap: anywhere;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    max-width: 1180px;
+    margin: 32px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: .92rem;
+}
+
+@media screen and (max-width: 760px) {
+    .site-footer {
+        padding: 34px 20px 18px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
