@@ -1,17 +1,49 @@
-const sidebar = document.querySelector(".sideBar");
+function setupSidebar() {
+    const sidebar = document.querySelector(".sideBar");
+    const openBtn = document.querySelector("#menu-open-button");
+    const closeBtn = document.querySelector("#menu-close-button");
 
-document
-.querySelector("#menu-open-button")
-.addEventListener("click",()=>{
+    if (!sidebar || !openBtn || !closeBtn) {
+        return;
+    }
 
-    sidebar.classList.add("active");
+    openBtn.addEventListener("click", () => {
+        sidebar.classList.add("active");
+    });
 
-});
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+}
 
-document
-.querySelector("#menu-close-button")
-.addEventListener("click",()=>{
+const navbarSlot = document.getElementById("navbar");
+const sidebarSlot = document.getElementById("sideBar");
+const footerSlot = document.getElementById("footer");
 
-    sidebar.classList.remove("active");
+if (navbarSlot) {
+    fetch("navbar.html")
+        .then(res => res.text())
+        .then(data => {
+            navbarSlot.innerHTML = data;
+            setupSidebar();
+        });
+}
 
-});
+if (sidebarSlot) {
+    fetch("sideBar.html")
+        .then(res => res.text())
+        .then(data => {
+            sidebarSlot.innerHTML = data;
+            setupSidebar();
+        });
+}
+
+if (footerSlot) {
+    fetch("footer.html")
+        .then(res => res.text())
+        .then(data => {
+            footerSlot.innerHTML = data;
+        });
+}
+
+setupSidebar();

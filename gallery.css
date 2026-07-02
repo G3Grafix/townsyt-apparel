@@ -1,0 +1,146 @@
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--background);
+    color: var(--text-primary);
+}
+
+.gallery-page,
+.gallery-page * {
+    box-sizing: border-box;
+}
+
+.gallery-page {
+    min-height: calc(100vh - 86px);
+    padding: 64px 8%;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, .86),
+            rgba(244, 235, 255, .78),
+            rgba(240, 249, 255, .86)
+        ),
+        url("STACKS/midsayap-town-hall.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1180px;
+    margin: 0 auto 34px;
+}
+
+.gallery-hero small,
+.gallery-info small {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.gallery-hero h1 {
+    max-width: 760px;
+    margin: 12px 0 14px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: clamp(2.6rem, 6vw, 5.5rem);
+    line-height: .92;
+    color: var(--secondary-color);
+}
+
+.gallery-hero p {
+    max-width: 700px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.gallery-cta {
+    flex: 0 0 auto;
+    padding: 1rem 1.8rem;
+    border-radius: 30px;
+    background: linear-gradient(90deg, var(--accent-color), var(--primary-dark));
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.gallery-shell {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(280px, 360px);
+    gap: 22px;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 10px 4px 26px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scrollbar-color: var(--accent-color) rgba(255, 255, 255, .7);
+}
+
+.gallery-card {
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    min-height: 460px;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.gallery-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--background);
+}
+
+.gallery-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 22px;
+}
+
+.gallery-info h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2rem;
+    color: var(--primary-dark);
+}
+
+.gallery-info p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+@media screen and (max-width: 760px) {
+    .gallery-page {
+        padding: 42px 20px;
+    }
+
+    .gallery-hero {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .gallery-cta {
+        width: 100%;
+        text-align: center;
+    }
+
+    .gallery-shell {
+        grid-auto-columns: minmax(82vw, 1fr);
+    }
+
+    .gallery-card {
+        min-height: 420px;
+    }
+
+}

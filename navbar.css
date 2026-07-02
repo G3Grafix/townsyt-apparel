@@ -1,0 +1,145 @@
+:root{
+
+    /* Brand Colors */
+    --primary-color:#6D28D9;
+    --primary-dark:#4C1D95;
+    --secondary-color:#111827;
+    --accent-color:#A855F7;
+
+    /* Background */
+    --background:#F8FAFC;
+    --surface:#FFFFFF;
+
+    /* Text */
+    --text-primary:#111827;
+    --text-secondary:#6B7280;
+    --text-white:#FFFFFF;
+
+    /* Border */
+    --border:#E5E7EB;
+
+    /* Success */
+    --success:#22C55E;
+
+    /* Warning */
+    --warning:#F59E0B;
+
+    /* Error */
+    --danger:#EF4444;
+
+    /* Shadow */
+    --shadow:0 10px 30px rgba(0,0,0,.12);
+
+    /* Radius */
+    --radius:12px;
+
+    /* Transition */
+    --transition:.6s ease;
+}
+
+header .navbar{
+
+
+    max-width: 100%;
+
+    margin: 0;
+
+    box-shadow: 0px 5px 10px var(--border);
+}
+
+header .navbar .nav-content{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: .5rem clamp(1rem, 8vw, 10rem);
+}
+
+
+header .navbar .nav-icons{
+
+    display: flex;
+    gap: clamp(1rem, 3vw, 3rem);
+
+}
+
+
+header .navbar .nav-icons a{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    text-decoration: none;
+
+    padding: .3rem 1rem;
+    border-radius: var(--radius);
+
+    color: var(--text-primary);
+    background-color: var(--background);
+
+
+}
+
+header .navbar button{
+
+    display: none;
+
+}
+
+header .navbar .nav-contact a{
+
+
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    text-decoration: none;
+
+    padding: .3rem 1rem;
+    border-radius: var(--radius);
+
+    border: 1px solid var(--primary-dark);
+
+    transition: var(--transition);
+
+}
+
+
+header .navbar .nav-icons a:hover{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    text-decoration: none;
+
+    padding: .3rem 1rem;
+    border-radius: var(--radius);
+
+    color: var(--text-white);
+    background-color: var(--accent-color);
+
+
+    transition: var(--transition);
+
+}
+
+header .navbar .nav-contact a:hover{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    text-decoration: none;
+
+    padding: .3rem 1rem;
+    border-radius: var(--radius);
+    
+    color: var(--text-white);
+    background: linear-gradient(
+    90deg,
+    var(--accent-color),
+    var(--primary-dark)
+     );
+
+    background-color: var(--background);
+
+    border: 1px solid var(--border);
+
+
+}
